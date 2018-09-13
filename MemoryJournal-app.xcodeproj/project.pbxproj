@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EB0B0B802149B48900F37BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B7F2149B48900F37BFD /* AppDelegate.swift */; };
-		EB0B0B822149B48900F37BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B812149B48900F37BFD /* ViewController.swift */; };
 		EB0B0B852149B48900F37BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0B832149B48900F37BFD /* Main.storyboard */; };
 		EB0B0B872149B48A00F37BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0B862149B48A00F37BFD /* Assets.xcassets */; };
 		EB0B0B8A2149B48A00F37BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0B882149B48A00F37BFD /* LaunchScreen.storyboard */; };
+		EB0B0B922149EB3E00F37BFD /* JournalEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */; };
+		EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */; };
+		EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B952149EDD500F37BFD /* Journal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB0B0B7C2149B48900F37BFD /* MemoryJournal-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemoryJournal-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0B0B7F2149B48900F37BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB0B0B812149B48900F37BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB0B0B842149B48900F37BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB0B0B862149B48A00F37BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB0B0B892149B48A00F37BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB0B0B8B2149B48A00F37BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesTableViewController.swift; sourceTree = "<group>"; };
+		EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntries.swift; sourceTree = "<group>"; };
+		EB0B0B952149EDD500F37BFD /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				EB0B0B7F2149B48900F37BFD /* AppDelegate.swift */,
-				EB0B0B812149B48900F37BFD /* ViewController.swift */,
+				EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */,
+				EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */,
+				EB0B0B952149EDD500F37BFD /* Journal.swift */,
 				EB0B0B832149B48900F37BFD /* Main.storyboard */,
 				EB0B0B862149B48A00F37BFD /* Assets.xcassets */,
 				EB0B0B882149B48A00F37BFD /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB0B0B822149B48900F37BFD /* ViewController.swift in Sources */,
+				EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */,
+				EB0B0B922149EB3E00F37BFD /* JournalEntriesTableViewController.swift in Sources */,
 				EB0B0B802149B48900F37BFD /* AppDelegate.swift in Sources */,
+				EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
