@@ -10,17 +10,32 @@ import UIKit
 
 class JournalEntriesDetailViewController: UIViewController {
 
+    //MARK: - Outlets
+    
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    //MARK: - Properties
+    var journalEntry = JournalEntry()
+    
+    //MARK: LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateDetailView()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     
+    //MARK: - Methods
+    
+    func populateDetailView() {
+    dateTextField.text = journalEntry.date
+    contentTextView.text = journalEntry.content
+    navigationItem.title = journalEntry.title
+    }
 
     /*
     // MARK: - Navigation

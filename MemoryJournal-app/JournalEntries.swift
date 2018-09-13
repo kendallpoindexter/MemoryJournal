@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct JournalEntries {
-    var title: String
-    var content: String
-    var date: String
+struct JournalEntry {
+    var title: String?
+    var content: String?
+    var date: String?
     
 }

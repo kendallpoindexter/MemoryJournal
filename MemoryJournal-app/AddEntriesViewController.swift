@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddEntriesViewControllerDelegate: class {
-    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntries)
+    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntry)
 }
 
 class AddEntriesViewController: UIViewController {
@@ -43,7 +43,7 @@ class AddEntriesViewController: UIViewController {
             let date = userDate.text,
             let text = userText.text else {return}
         
-        let newJournalEntries = JournalEntries(title: title, content: text, date: date)
+        let newJournalEntries = JournalEntry(title: title, content: text, date: date)
 
         delegate?.addEntries(controller: self, finishAdding: newJournalEntries)
     }

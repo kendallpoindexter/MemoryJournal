@@ -13,6 +13,8 @@ class JournalEntriesTableViewController: UITableViewController {
     //MARK: - Properties
     
     var journal = Journal()
+    var selectedJournal: JournalEntry?
+
     
     //MARK: - LifeCycle
 
@@ -30,7 +32,6 @@ class JournalEntriesTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,6 +77,9 @@ class JournalEntriesTableViewController: UITableViewController {
         if segue.identifier == "newMemoriesSegue"{
             guard let addEntriesViewController = segue.destination as? AddEntriesViewController else { return }
             addEntriesViewController.delegate = self
+        } else if segue.identifier == "memoryDetailSegue" {
+            guard let journalEntriesDetailViewController = segue.destination as? JournalEntriesDetailViewController else {return}
+            journalEntriesDetailViewController.journalEntry = selectedJournal!
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -84,10 +88,19 @@ class JournalEntriesTableViewController: UITableViewController {
 
 }
 
+//MARK: - UITableViewDelegate protocols
+
+extension JournalEntriesTableViewController {
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedJournal = journal.entries[indexPath.row]
+        return indexPath
+    }
+}
+
 //MARK: - AddEntriesViewControllerDelegate Protocols
 
 extension JournalEntriesTableViewController: AddEntriesViewControllerDelegate {
-    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntries) {
+    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntry) {
         let newRowIndex = journal.entries.count
         journal.entries.append(entry)
         

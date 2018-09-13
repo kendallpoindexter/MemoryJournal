@@ -15,6 +15,7 @@
 		EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */; };
 		EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B952149EDD500F37BFD /* Journal.swift */; };
 		EB0B0B9A214A022900F37BFD /* AddEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B99214A022900F37BFD /* AddEntriesViewController.swift */; };
+		EB933DE8214AD9AF00E68864 /* JournalEntriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB933DE7214AD9AF00E68864 /* JournalEntriesDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntries.swift; sourceTree = "<group>"; };
 		EB0B0B952149EDD500F37BFD /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		EB0B0B99214A022900F37BFD /* AddEntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntriesViewController.swift; sourceTree = "<group>"; };
+		EB933DE7214AD9AF00E68864 /* JournalEntriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB0B0B7F2149B48900F37BFD /* AppDelegate.swift */,
 				EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */,
 				EB0B0B99214A022900F37BFD /* AddEntriesViewController.swift */,
+				EB933DE7214AD9AF00E68864 /* JournalEntriesDetailViewController.swift */,
 				EB0B0B832149B48900F37BFD /* Main.storyboard */,
 				EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */,
 				EB0B0B952149EDD500F37BFD /* Journal.swift */,
@@ -148,6 +151,7 @@
 				EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */,
 				EB0B0B922149EB3E00F37BFD /* JournalEntriesTableViewController.swift in Sources */,
 				EB0B0B802149B48900F37BFD /* AppDelegate.swift in Sources */,
+				EB933DE8214AD9AF00E68864 /* JournalEntriesDetailViewController.swift in Sources */,
 				EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
