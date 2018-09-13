@@ -14,6 +14,7 @@
 		EB0B0B922149EB3E00F37BFD /* JournalEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */; };
 		EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */; };
 		EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B952149EDD500F37BFD /* Journal.swift */; };
+		EB0B0B982149FB4400F37BFD /* AddEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0B972149FB4400F37BFD /* AddEntriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB0B0B912149EB3E00F37BFD /* JournalEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesTableViewController.swift; sourceTree = "<group>"; };
 		EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntries.swift; sourceTree = "<group>"; };
 		EB0B0B952149EDD500F37BFD /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		EB0B0B972149FB4400F37BFD /* AddEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB0B0B932149EBAF00F37BFD /* JournalEntries.swift */,
 				EB0B0B952149EDD500F37BFD /* Journal.swift */,
 				EB0B0B832149B48900F37BFD /* Main.storyboard */,
+				EB0B0B972149FB4400F37BFD /* AddEntriesTableViewController.swift */,
 				EB0B0B862149B48A00F37BFD /* Assets.xcassets */,
 				EB0B0B882149B48A00F37BFD /* LaunchScreen.storyboard */,
 				EB0B0B8B2149B48A00F37BFD /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0B0B942149EBAF00F37BFD /* JournalEntries.swift in Sources */,
+				EB0B0B982149FB4400F37BFD /* AddEntriesTableViewController.swift in Sources */,
 				EB0B0B922149EB3E00F37BFD /* JournalEntriesTableViewController.swift in Sources */,
 				EB0B0B802149B48900F37BFD /* AppDelegate.swift in Sources */,
 				EB0B0B962149EDD500F37BFD /* Journal.swift in Sources */,

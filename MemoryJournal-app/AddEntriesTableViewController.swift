@@ -1,5 +1,5 @@
 //
-//  JournalEntriesTableViewController.swift
+//  AddEntriesTableViewController.swift
 //  MemoryJournal-app
 //
 //  Created by Kendall Poindexter on 9/12/18.
@@ -8,13 +8,7 @@
 
 import UIKit
 
-class JournalEntriesTableViewController: UITableViewController {
-    
-    //MARK: - Properties
-    
-    var journal = Journal()
-    
-    //MARK: - LifeCycle
+class AddEntriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,30 +25,17 @@ class JournalEntriesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+   
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return journal.entries.count
-    }
-
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "titles", for: indexPath)
-        
-        cell.textLabel?.text = journal.entries[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
-    //MARK: - Actions
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,6 +57,20 @@ class JournalEntriesTableViewController: UITableViewController {
     }
     */
 
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
 
     /*
     // MARK: - Navigation

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Journal Entries Table View Controller-->
+        <!--My Memories -->
         <scene sceneID="8bN-Ja-bPN">
             <objects>
                 <tableViewController id="q7s-hM-0xV" customClass="JournalEntriesTableViewController" customModule="MemoryJournal_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,13 @@
                             <outlet property="delegate" destination="q7s-hM-0xV" id="tGU-jD-jIB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="FIo-2H-lBc"/>
+                    <navigationItem key="navigationItem" title="My Memories " id="FIo-2H-lBc">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="a8y-2y-PM0">
+                            <connections>
+                                <segue destination="sYe-8f-ziu" kind="show" id="fO0-Ax-0pO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oCS-72-6uJ" id="ZhX-hy-zcs"/>
                     </connections>
@@ -40,6 +46,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUc-RE-Jw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="880.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--New Memories -->
+        <scene sceneID="pOk-PC-gLg">
+            <objects>
+                <tableViewController id="sYe-8f-ziu" customClass="AddEntriesTableViewController" customModule="MemoryJournal_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fev-QS-wWL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="xwV-ch-qZv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ERT-KB-u7L">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ERT-KB-u7L" id="FD5-P7-d9u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pgQ-XI-VXb">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pgQ-XI-VXb" id="TSW-pp-NQP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8ma-8O-4CY">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ma-8O-4CY" id="Lbi-8G-gqa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sYe-8f-ziu" id="lIH-6x-uMK"/>
+                            <outlet property="delegate" destination="sYe-8f-ziu" id="Yde-rg-6ML"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Memories " id="m5v-Gv-ULX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khG-sM-mZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BF7-2g-7Cf">
