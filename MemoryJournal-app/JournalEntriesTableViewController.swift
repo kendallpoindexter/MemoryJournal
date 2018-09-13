@@ -61,6 +61,10 @@ class JournalEntriesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newMemoriesSegue"{
+            guard let addEntriesViewController = segue.destination as? AddEntriesViewController else { return }
+            addEntriesViewController.delegate = self
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
@@ -71,8 +75,14 @@ class JournalEntriesTableViewController: UITableViewController {
 //MARK: - AddEntriesViewControllerDelegate Protocols
 
 extension JournalEntriesTableViewController: AddEntriesViewControllerDelegate {
-    func addEntries(finishAdding entry: JournalEntries) {
-        <#code#>
+    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntries) {
+        let newRowIndex = journal.entries.count
+        journal.entries.append(entry)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     

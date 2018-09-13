@@ -43,9 +43,9 @@ class AddEntriesViewController: UIViewController {
             let date = userDate.text,
             let text = userText.text else {return}
         
-        var newJournalEntries = JournalEntries(title: title, content: text, date: date)
+        let newJournalEntries = JournalEntries(title: title, content: text, date: date)
 
-        
+        delegate?.addEntries(controller: self, finishAdding: newJournalEntries)
     }
     
 
