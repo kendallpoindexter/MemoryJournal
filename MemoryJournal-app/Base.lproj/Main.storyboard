@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="880.79999999999995" y="122.78860569715144"/>
         </scene>
-        <!--Add Entries View Controller-->
+        <!--New Memories -->
         <scene sceneID="KR1-7J-XOt">
             <objects>
                 <viewController id="XKq-Ib-tua" customClass="AddEntriesViewController" customModule="MemoryJournal_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,6 +110,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KgM-DN-ZUh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Memories " id="f82-WR-Pje">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Bxq-5A-6Dl">
+                            <connections>
+                                <action selector="doneAdding:" destination="XKq-Ib-tua" id="dh8-Ca-Ebg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userDate" destination="Mig-IN-jrO" id="F8f-ns-f4B"/>
+                        <outlet property="userText" destination="Va9-wu-9p3" id="zkk-da-fNv"/>
+                        <outlet property="userTitle" destination="7Vg-mh-AFc" id="XbH-3G-13W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvZ-Xw-wyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

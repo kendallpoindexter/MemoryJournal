@@ -8,7 +8,21 @@
 
 import UIKit
 
+protocol AddEntriesViewControllerDelegate: class {
+    func addEntries(controller: AddEntriesViewController, finishAdding entry: JournalEntries)
+}
+
 class AddEntriesViewController: UIViewController {
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var userTitle: UITextField!
+    @IBOutlet weak var userDate: UITextField!
+    @IBOutlet weak var userText: UITextView!
+    
+    //MARK: - Properties
+    
+    weak var delegate: AddEntriesViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +35,20 @@ class AddEntriesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Actions
+    
+    @IBAction func doneAdding(_ sender: UIBarButtonItem) {
+        
+        guard let title = userTitle.text,
+            let date = userDate.text,
+            let text = userText.text else {return}
+        
+        var newJournalEntries = JournalEntries(title: title, content: text, date: date)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
+
+    
 
 }
