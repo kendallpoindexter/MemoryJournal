@@ -8,13 +8,13 @@
 
 import UIKit
 
+
 class JournalEntriesTableViewController: UITableViewController {
     
     //MARK: - Properties
     
     var journal = Journal()
-    var selectedJournal: JournalEntry?
-
+    var selectedJournalEntryIndex: Int?
     
     //MARK: - LifeCycle
 
@@ -28,10 +28,6 @@ class JournalEntriesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,7 +40,6 @@ class JournalEntriesTableViewController: UITableViewController {
         return journal.entries.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "titles", for: indexPath)
         
@@ -79,7 +74,10 @@ class JournalEntriesTableViewController: UITableViewController {
             addEntriesViewController.delegate = self
         } else if segue.identifier == "memoryDetailSegue" {
             guard let journalEntriesDetailViewController = segue.destination as? JournalEntriesDetailViewController else {return}
-            journalEntriesDetailViewController.journalEntry = selectedJournal!
+            journalEntriesDetailViewController.journalEntry = journal.entries[selectedJournalEntryIndex!]
+            journalEntriesDetailViewController.delegate = self
+            
+            
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -92,7 +90,7 @@ class JournalEntriesTableViewController: UITableViewController {
 
 extension JournalEntriesTableViewController {
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        selectedJournal = journal.entries[indexPath.row]
+        selectedJournalEntryIndex = indexPath.row
         return indexPath
     }
 }
@@ -112,3 +110,15 @@ extension JournalEntriesTableViewController: AddEntriesViewControllerDelegate {
     
     
 }
+
+//MARK: - JournalDetailViewControllerDelegate Protocols
+
+extension JournalEntriesTableViewController: JournalEntriesDetailViewControllerDelegate {
+    func saveEdit(_controller: JournalEntriesDetailViewController, finishEditing entry: JournalEntry) {
+        journal.entries[selectedJournalEntryIndex!] = entry
+        navigationController?.popViewController(animated: true)
+        
+        tableView.reloadData()
+    }
+}
+

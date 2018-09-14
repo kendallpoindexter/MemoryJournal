@@ -8,15 +8,23 @@
 
 import UIKit
 
+//MARK: - JournalEntriesDetailViewController delegate protocols
+
+protocol JournalEntriesDetailViewControllerDelegate: class {
+    func saveEdit(_controller: JournalEntriesDetailViewController, finishEditing entry: JournalEntry)
+}
+
 class JournalEntriesDetailViewController: UIViewController {
 
     //MARK: - Outlets
     
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     
     //MARK: - Properties
     var journalEntry = JournalEntry()
+    weak var delegate: JournalEntriesDetailViewControllerDelegate?
     
     //MARK: LifeCycle
     
@@ -34,9 +42,24 @@ class JournalEntriesDetailViewController: UIViewController {
     func populateDetailView() {
     dateTextField.text = journalEntry.date
     contentTextView.text = journalEntry.content
-    navigationItem.title = journalEntry.title
+    titleTextField.text = journalEntry.title
+    }
+    
+    func editedDetailView() {
+        journalEntry.date = dateTextField.text
+        journalEntry.content = contentTextView.text
+        journalEntry.title = titleTextField.text
     }
 
+    //MARK: - Actions
+    
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        editedDetailView()
+        let editedEntry = journalEntry
+        
+        delegate?.saveEdit(_controller: self, finishEditing: editedEntry)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -48,3 +71,7 @@ class JournalEntriesDetailViewController: UIViewController {
     */
 
 }
+
+    
+
+
